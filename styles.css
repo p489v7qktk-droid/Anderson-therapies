@@ -1,0 +1,370 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(180deg, #f6eefc 0%, #f7f1f7 45%, #fef8f3 100%);
+    color: #3b3b4d;
+}
+
+body {
+    padding: 1rem;
+}
+
+header {
+    max-width: 1200px;
+    margin: 0 auto 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(250, 243, 255, 0.88);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(196, 177, 243, 0.45);
+    border-radius: 20px;
+    box-shadow: 0 16px 36px rgba(145, 109, 195, 0.14);
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-group {
+    min-width: 260px;
+}
+
+.brand {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.tagline {
+    margin-top: 0.35rem;
+    font-size: 1rem;
+    color: #f3e8ff;
+    max-width: 40rem;
+}
+
+.contact-header {
+    text-align: right;
+    color: #ffffff;
+}
+
+.contact-header p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+.contact-header a {
+    color: #5a3b6b;
+    text-decoration: none;
+}
+
+.contact-header a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero,
+.overview,
+.accreditations {
+    padding: 3rem 2.5rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(255, 245, 250, 0.98), rgba(233, 241, 255, 0.95));
+    text-align: center;
+}
+
+.main-logo {
+    width: 180px;
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+    display: block;
+    padding: 0.8rem;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 18px 45px rgba(163, 136, 198, 0.12);
+    opacity: 0.98;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.main-logo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 50px rgba(163, 136, 198, 0.24);
+}
+
+/* Headings and consistent spacing */
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.4rem;
+    color: #4a148c;
+    margin: 0 0 1rem;
+    text-transform: none;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(244, 236, 255, 0.95), rgba(255, 250, 255, 0.95));
+    box-shadow: 0 16px 35px rgba(137, 96, 183, 0.12);
+    padding: 0.5rem;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+}
+
+.about-headshot {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    border-radius: 50%;
+    object-position: 72% 26%;
+    background: #f7f2ff;
+}
+
+.profile-copy {
+    color: #3b3b4d;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #4a148c;
+    margin: 1.25rem 0 0.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #3b3b4d;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: rgba(245, 234, 255, 0.9);
+    color: #4b2c5f;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(170, 132, 201, 0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    margin: 0.25rem 0.25rem;
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, #e9d7ff, #fff6f0);
+    color: #482a5b;
+    box-shadow: 0 10px 25px rgba(144, 103, 196, 0.08);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(144, 103, 196, 0.12);
+}
+
+.overview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.overview-card {
+    padding: 1.75rem;
+    background: rgba(255, 248, 251, 0.95);
+    border-radius: 22px;
+    border: 1px solid rgba(205, 185, 232, 0.45);
+    box-shadow: 0 12px 28px rgba(137, 96, 183, 0.12);
+}
+
+.overview-card h2 {
+    font-family: 'Merriweather', serif;
+    color: #4a148c;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.overview-card ul {
+    list-style: disc inside;
+    color: #3b2b4d;
+    line-height: 1.75;
+}
+
+.accreditations {
+    background: #f8f0ff;
+    border-top: 1px solid rgba(122, 68, 156, 0.12);
+    text-align: center;
+}
+
+.accreditations p {
+    margin-bottom: 1.5rem;
+    color: #5d3d7a;
+    font-size: 1rem;
+}
+
+.logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-row img {
+    max-height: 70px;
+    width: auto;
+    filter: saturate(1.05);
+}
+
+.credential-container {
+    display: none;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.6rem 0 0.9rem;
+}
+
+.main-nav a {
+    color: #5a3b6b;
+    text-decoration: none;
+    background: rgba(250, 245, 255, 0.7);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(170, 132, 201, 0.18);
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    background: linear-gradient(90deg, rgba(245,232,255,0.95), rgba(255,247,240,0.95));
+}
+
+.page-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+article h1 {
+    font-family: 'Merriweather', serif;
+    color: #4a148c;
+    margin-bottom: 1rem;
+}
+
+/* Page-specific spacing for consistent rhythm */
+article h2 {
+    font-family: 'Merriweather', serif;
+    color: #4a148c;
+    margin: 1.25rem 0 0.9rem;
+    font-size: 1.25rem;
+}
+
+article h3 {
+    font-family: 'Merriweather', serif;
+    color: #4a148c;
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+article p,
+article ul {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+article ul {
+    padding-left: 1.25rem;
+}
+
+/* Consistent spacing for the 'Why this matters' list */
+.why-list {
+    margin: 0 0 1rem 1.25rem;
+    padding: 0;
+    list-style: disc;
+}
+.why-list li {
+    margin: 0 0 0.6rem 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 860px) {
+    .overview {
+        grid-template-columns: 1fr;
+    }
+
+    .header-inner {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contact-header {
+        text-align: center;
+    }
+}
+
+@media (max-width: 860px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        max-width: 280px;
+        margin: 0 auto 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header,
+    .hero,
+    .overview,
+    .accreditations {
+        padding: 2rem 1.5rem;
+    }
+
+    .brand {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}
