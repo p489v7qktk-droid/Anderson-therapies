@@ -1,33 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const floatingLogoWrap = document.querySelector('.floating-logo-wrap');
-
-    if (floatingLogoWrap) {
-        const footer = document.querySelector('.site-footer');
-        const stopTarget = document.querySelector('.contact-header, .header-inner, header') || footer;
-
-        const updateFloat = () => {
-            const viewportWidth = window.innerWidth;
-            const scale = viewportWidth <= 980 ? 0.68 : viewportWidth <= 1200 ? 0.82 : 1;
-            const scrollShift = window.scrollY * 0.12;
-
-            const stopDistance = stopTarget
-                ? Math.max(0, stopTarget.getBoundingClientRect().bottom - window.innerHeight * 0.22)
-                : 0;
-
-            const maxShift = stopTarget
-                ? Math.min(scrollShift, stopDistance)
-                : footer
-                    ? Math.max(0, footer.getBoundingClientRect().top - window.innerHeight + 90)
-                    : 0;
-
-            floatingLogoWrap.style.transform = `translateY(${maxShift}px) scale(${scale})`;
-        };
-
-        updateFloat();
-        window.addEventListener('scroll', updateFloat, { passive: true });
-        window.addEventListener('resize', updateFloat, { passive: true });
-    }
-
     const contactForm = document.querySelector('[data-contact-form]');
 
     if (contactForm) {

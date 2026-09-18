@@ -820,15 +820,17 @@ article li + li {
         gap: 0.8rem;
     }
 
-    .hero-headshot-wrap {
+        .hero-headshot-wrap {
         width: 110px;
         height: 110px;
     }
 
     .hero-side-logo {
-        width: 140px;
-        height: 140px;
-        padding: 0.9rem;
+        width: 110px;
+        height: 110px;
+        min-width: 110px;
+        min-height: 110px;
+        padding: 0.75rem;
     }
 }
 
@@ -914,8 +916,10 @@ article li + li {
 
     .hero-side-logo {
         justify-self: center;
-        width: 120px;
-        height: 120px;
-        padding: 0.85rem;
+        width: 92px;
+        height: 92px;
+        min-width: 92px;
+        min-height: 92px;
+        padding: 0.6rem;
     }
 }
