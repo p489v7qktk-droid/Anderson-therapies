@@ -16,10 +16,6 @@
             <div class="brand-group">
                 <p class="brand" style="color: #4a148c;">Anderson Therapies</p>
             </div>
-            <div class="contact-header" aria-label="Contact information">
-                <p>Email: <a href="mailto:sabrinaanderson@andersontherapies.co.uk">sabrinaanderson@andersontherapies.co.uk</a></p>
-                <p>Phone: <strong>+44 7927 188 998</strong></p>
-            </div>
         </div>
         <nav class="main-nav">
             <a href="index.html">Home</a>
@@ -37,14 +33,71 @@
 
     <main class="page-container">
         <article>
-            <h1>Contact</h1>
-            <p>I would be delighted to hear about a new project idea, a community requirement, or your training and supervision needs.</p>
+            <h1>Let’s Start a Conversation</h1>
+            <p>If you are exploring a project, training, supervision, service development or a potential collaboration, I would be delighted to hear from you.</p>
 
-            <p>To arrange an initial conversation, please email me directly:</p>
+            <div class="contact-layout">
+                <section class="contact-panel" aria-labelledby="enquiry-heading">
+                    <h2 id="enquiry-heading">Tell me about your enquiry</h2>
 
-            <p><a class="btn" href="mailto:sabrinaanderson@andersontherapies.co.uk?subject=Contact%20Enquiry">sabrinaanderson@andersontherapies.co.uk</a></p>
+                    <form class="contact-form" data-contact-form data-form-ready="false" novalidate>
+                        <div class="field-group">
+                            <label for="name">Name <span aria-label="required">*</span></label>
+                            <input id="name" name="name" type="text" required aria-required="true">
+                        </div>
 
-            <p>You can also reach me by phone on <strong>+44 7927 188 998</strong>.</p>
+                        <div class="field-group">
+                            <label for="email">Email address <span aria-label="required">*</span></label>
+                            <input id="email" name="email" type="email" required aria-required="true">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="organisation">Organisation <span class="optional-text">(optional)</span></label>
+                            <input id="organisation" name="organisation" type="text">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="topic">What would you like to discuss? <span aria-label="required">*</span></label>
+                            <select id="topic" name="topic" required aria-required="true">
+                                <option value="" selected disabled>Select an option</option>
+                                <option>Consultancy or service development</option>
+                                <option>Training or workforce development</option>
+                                <option>Connecting and Communicating Together</option>
+                                <option>Supervision or reflective practice</option>
+                                <option>Parent or community projects</option>
+                                <option>Speaking or collaboration</option>
+                                <option>Something else</option>
+                            </select>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="message">Please tell me briefly what you would like to explore <span aria-label="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn primary">Send enquiry</button>
+
+                        <div class="form-message" aria-live="polite"></div>
+                    </form>
+
+                    <p class="contact-note">I usually respond within three working days. Please do not include confidential, clinical or sensitive personal information in this form.</p>
+                </section>
+
+                <section class="contact-panel" aria-labelledby="booking-heading">
+                    <h2 id="booking-heading">Book an introductory conversation</h2>
+                    <p>If you already have a clear idea of what you would like to discuss, you can arrange a free 15-minute introductory call.</p>
+
+                    <a class="btn booking-button" href="https://bookings.cloud.microsoft/bookwithme/user/027f1d3a49b14119b228668c0ffa9e4e@AndersonTherapies.co.uk/meetingtype/nwR0FEoGdUittFYkIEnR7Q2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" rel="noopener noreferrer" aria-label="Book a 15-minute introductory call">Book a 15-minute introductory call</a>
+
+                    <p class="contact-note">Introductory calls are for discussing projects, training, supervision and potential collaborations. They are not a route for clinical advice or urgent support.</p>
+                </section>
+            </div>
+
+            <div class="direct-contact">
+                <p>You can also contact me directly:</p>
+                <p>Email: <a href="mailto:sabrinaanderson@andersontherapies.co.uk">sabrinaanderson@andersontherapies.co.uk</a></p>
+                <p>Telephone: <a href="tel:+447927188998">+44 7927 188 998</a></p>
+            </div>
         </article>
     </main>
 

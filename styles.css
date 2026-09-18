@@ -135,6 +135,24 @@ header {
     border: 3px solid rgba(255, 255, 255, 0.88);
 }
 
+@media (max-width: 1200px) {
+    .floating-logo-wrap {
+        width: clamp(84px, 8vw, 120px);
+        right: 0.8rem;
+        top: 24vh;
+        opacity: 0.82;
+    }
+}
+
+@media (max-width: 980px) {
+    .floating-logo-wrap {
+        width: 74px;
+        right: 0.65rem;
+        top: 22vh;
+        opacity: 0.72;
+    }
+}
+
 @keyframes floatSoft {
     0%, 100% {
         transform: translateY(0px);
@@ -173,23 +191,30 @@ header {
 
 .hero-intro {
     display: grid;
-    grid-template-columns: 170px 1fr 170px;
+    grid-template-columns: 230px minmax(0, 1fr) 230px;
     align-items: center;
-    gap: 1.1rem;
-    margin-bottom: 1.2rem;
+    justify-items: center;
+    column-gap: clamp(1.2rem, 2.6vw, 2.4rem);
+    margin-bottom: 1.6rem;
 }
 
 .hero-intro-text {
     min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5rem;
 }
 
 .hero-headshot-wrap {
-    width: 150px;
-    height: 150px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    justify-self: start;
+    justify-self: center;
     background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,234,255,0.8));
 }
 
@@ -276,17 +301,23 @@ header {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.hero-side-logo {
-    width: 190px;
-    height: 190px;
+.main-logo.hero-side-logo {
+    width: 230px;
+    height: 230px;
+    min-width: 230px;
+    min-height: 230px;
     margin: 0;
-    justify-self: end;
-    border-radius: 50%;
+    justify-self: center;
+    border-radius: 50% !important;
     object-fit: contain;
-    object-position: center 42%;
+    object-position: center;
     aspect-ratio: 1 / 1;
-    padding: 1.25rem;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.95);
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 18px 45px rgba(163, 136, 198, 0.18);
 }
 
 .main-logo:hover {
@@ -356,8 +387,9 @@ article {
     aspect-ratio: 1 / 1;
     height: 100%;
     border-radius: 50%;
-    object-position: 72% 26%;
+    object-position: 58% 26%;
     background: #f7f2ff;
+    filter: saturate(1.05) contrast(1.06);
 }
 
 .profile-copy {
@@ -546,6 +578,111 @@ p {
     width: min(100%, 900px);
 }
 
+.contact-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin: 1.75rem 0;
+}
+
+.contact-panel {
+    background: rgba(255, 252, 255, 0.92);
+    border: 1px solid rgba(170, 132, 201, 0.2);
+    border-radius: 22px;
+    box-shadow: 0 14px 30px rgba(145, 109, 195, 0.08);
+    padding: 1.4rem;
+}
+
+.contact-panel h2 {
+    margin-top: 0;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.field-group {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.field-group label {
+    font-weight: 600;
+    color: #4b2c5f;
+}
+
+.optional-text {
+    font-weight: 400;
+    color: #6a597b;
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid rgba(170, 132, 201, 0.35);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    color: #3b3b4d;
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus,
+.btn:focus-visible,
+.inline-link:focus-visible,
+.footer-links a:focus-visible,
+.main-nav a:focus-visible {
+    outline: 3px solid rgba(110, 74, 162, 0.35);
+    outline-offset: 2px;
+    border-color: rgba(110, 74, 162, 0.6);
+    box-shadow: 0 0 0 4px rgba(110, 74, 162, 0.12);
+}
+
+.form-message {
+    min-height: 1.2rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-message.error {
+    color: #7a234a;
+}
+
+.form-message.success {
+    color: #1d5b3b;
+}
+
+.contact-note {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #5d3d7a;
+}
+
+.direct-contact {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(170, 132, 201, 0.18);
+}
+
+.inline-link {
+    color: #5a3b6b;
+    text-decoration: underline;
+}
+
+.booking-button[hidden] {
+    display: none;
+}
+
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -641,8 +778,8 @@ article li + li {
         align-items: center;
     }
 
-    .contact-header {
-        text-align: center;
+    .contact-layout {
+        grid-template-columns: 1fr;
     }
 
     .profile-grid {
@@ -710,6 +847,32 @@ article li + li {
     .main-nav a {
         flex: 1 1 100%;
         font-size: 0.95rem;
+    }
+
+    .floating-logo-wrap {
+        width: 72px;
+        right: 0.7rem;
+        top: 22vh;
+        opacity: 0.7;
+        z-index: 3;
+    }
+
+    .floating-logo-wrap img {
+        border-width: 2px;
+    }
+
+    .site-footer {
+        padding-right: 3.2rem;
+        padding-bottom: 2.4rem;
+    }
+
+    .footer-social {
+        right: 0.7rem;
+        bottom: 0.7rem;
+    }
+
+    .footer-links {
+        padding-right: 2.4rem;
     }
 
     article h1 {
