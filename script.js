@@ -10,12 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         contactForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
             const requiredFields = [...contactForm.querySelectorAll('[required]')];
             const missing = requiredFields.filter((field) => !field.value.trim());
 
             if (missing.length > 0) {
+                event.preventDefault();
                 showMessage('error', 'Please complete all required fields before sending your enquiry.');
                 return;
             }
@@ -24,17 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
             if (emailField && !emailPattern.test(emailField.value.trim())) {
+                event.preventDefault();
                 showMessage('error', 'Please enter a valid email address.');
-                return;
             }
-
-            const endpoint = contactForm.dataset.formAction || '';
-            if (!endpoint || endpoint === '#') {
-                showMessage('error', 'The enquiry form is not connected yet. Please send the form provider account or endpoint before publishing this form.');
-                return;
-            }
-
-            showMessage('success', 'Thank you. Your enquiry has been prepared for submission.');
         });
     }
 

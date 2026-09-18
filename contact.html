@@ -40,7 +40,11 @@
                 <section class="contact-panel" aria-labelledby="enquiry-heading">
                     <h2 id="enquiry-heading">Tell me about your enquiry</h2>
 
-                    <form class="contact-form" data-contact-form data-form-ready="false" novalidate>
+                    <form class="contact-form" data-contact-form action="https://formsubmit.co/sabrinaanderson@andersontherapies.co.uk" method="POST" novalidate>
+                        <input type="hidden" name="_subject" value="New website enquiry — Anderson Therapies">
+                        <input type="hidden" name="_next" value="https://andersontherapies.co.uk/thank-you.html">
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;">
                         <div class="field-group">
                             <label for="name">Name <span aria-label="required">*</span></label>
                             <input id="name" name="name" type="text" required aria-required="true">
@@ -80,7 +84,7 @@
                         <div class="form-message" aria-live="polite"></div>
                     </form>
 
-                    <p class="contact-note">I usually respond within three working days. Please do not include confidential, clinical or sensitive personal information in this form.</p>
+                    <p class="contact-note">I usually respond within three working days. Please do not include confidential, clinical or sensitive personal information in this form. Read the <a class="inline-link" href="privacy-policy.html">Privacy Policy</a>.</p>
                 </section>
 
                 <section class="contact-panel" aria-labelledby="booking-heading">
