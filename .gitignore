@@ -1,0 +1,12 @@
+# Private documents and local exports
+CV*.docx
+CV*.zip
+cv_unzip/
+anderson-therapies-deploy.zip
+
+# Local tooling and generated files
+extract_cv.py
+crop_headshot.py
+*.log
+.DS_Store
+Thumbs.db
