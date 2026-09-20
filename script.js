@@ -1,4 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNavigation = document.querySelector('.main-nav');
+
+    if (navToggle && mainNavigation) {
+        const setNavigationState = (isOpen) => {
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            mainNavigation.classList.toggle('is-open', isOpen);
+        };
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            setNavigationState(!isOpen);
+        });
+
+        mainNavigation.addEventListener('click', (event) => {
+            if (event.target.closest('a')) setNavigationState(false);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('header')) setNavigationState(false);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                setNavigationState(false);
+                navToggle.focus();
+            }
+        });
+    }
+
     const contactForm = document.querySelector('[data-contact-form]');
 
     if (contactForm) {

@@ -17,7 +17,8 @@
                 <p class="brand" style="color: #4a148c;">Anderson Therapies</p>
             </div>
         </div>
-        <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="nav-toggle-label">Menu</span></button>
+        <nav class="main-nav" id="main-navigation" aria-label="Primary">
             <a href="../index.html">Home</a>
             <a href="../work-with-me.html">Approach</a>
             <a href="../consultancy.html">Consultancy</a>
@@ -39,10 +40,9 @@
                     <p class="events-label">COMING EARLY 2027</p>
                     <h1 id="events-title">The Parent Space</h1>
                     <p class="events-location">South Hertfordshire</p>
-                    <p>A small, welcoming space for parents of children with special educational needs and disabilities (SEND) to pause, connect and explore practical ways of responding to anxiety, overwhelm and emotional distress.</p>
+                    <p>A small, welcoming space for parents of children with special educational needs and disabilities (SEND) to pause, connect and explore practical responses to anxiety, overwhelm and emotional distress.</p>
                     <a class="btn primary" href="#interest-form">Share your interest</a>
                 </div>
-                <img class="events-hero-image" src="../events-parent-space-sketch.png" alt="A colourful sketched illustration of adults connecting through conversation, music, drumming, reflection and movement.">
             </section>
 
             <section class="event-cues" aria-label="What The Parent Space will include">
@@ -53,8 +53,7 @@
 
             <section class="events-soft-section" aria-labelledby="parent-space-title">
                 <h2 id="parent-space-title">A different kind of parent space</h2>
-                <p>The Parent Space will bring together shared conversation, reflection, music and drumming, movement and other creative activities. It will draw on ideas from communication, sensory processing and parent-led cognitive behavioural therapy (CBT), while offering something practical, experiential and grounded.</p>
-                <p>The event is taking shape with a creative collaborator.</p>
+                <p>The Parent Space will combine conversation and reflection with music, drumming, movement and other creative activities. It will draw on communication, sensory processing and parent-led cognitive behavioural therapy (CBT), offering an experience that is practical, creative and grounded.</p>
                 <p class="events-note">The introductory event will be for adults only. No experience of drumming or movement will be needed, and activities will be adaptable.</p>
             </section>
 
@@ -86,21 +85,18 @@
                         <label for="parent-interest">What interests you about The Parent Space? <span class="optional-text">(optional)</span></label>
                         <textarea id="parent-interest" name="interest" rows="4"></textarea>
                     </div>
-                    <div class="field-group">
-                        <label for="parent-access">Accessibility or communication requirements <span class="optional-text">(optional)</span></label>
-                        <textarea id="parent-access" name="accessibility_requirements" rows="4"></textarea>
-                    </div>
                     <label class="consent-check" for="parent-consent">
-                        <input id="parent-consent" name="consent" type="checkbox" value="I am happy to receive updates about The Parent Space and related Anderson Therapies events." required aria-required="true">
-                        <span>I’m happy to receive updates about The Parent Space and related Anderson Therapies events.</span>
+                        <input id="parent-consent" name="consent" type="checkbox" value="I would like to receive email updates about The Parent Space." required aria-required="true">
+                        <span>I would like to receive email updates about The Parent Space.</span>
                     </label>
+                    <p class="contact-note consent-note">We’ll use your details to record your interest and send you updates about The Parent Space. You can withdraw your consent at any time. Please see our <a class="inline-link" href="../privacy-policy.html">Privacy Policy</a>.</p>
                     <button type="submit" class="btn primary">Share my interest</button>
                     <div class="form-message" data-events-message aria-live="polite"></div>
                 </form>
             </section>
 
             <section class="events-holding" aria-labelledby="more-events-title">
-                <h2 id="more-events-title">More events will be added here</h2>
+                <h2 id="more-events-title">More Events Coming Soon</h2>
                 <p>Further Anderson Therapies workshops and community events are in development. Please check back for updates.</p>
             </section>
         </article>
