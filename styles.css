@@ -155,12 +155,15 @@ body:has(.floating-logo-wrap) header::after {
 }
 
 .hero {
+    max-width: 1200px;
+    width: 100%;
     background: linear-gradient(135deg, rgba(255, 245, 250, 0.98), rgba(233, 241, 255, 0.95));
     text-align: center;
+    padding-inline: 0;
 }
 
 .hero-content {
-    max-width: 920px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
 }
@@ -437,7 +440,7 @@ article {
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 20px 48px rgba(116, 88, 155, 0.12);
     border: 1px solid rgba(170, 132, 201, 0.18);
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -821,7 +824,7 @@ p {
 .page-container {
     max-width: 1200px;
     margin: 0.25rem auto 1.25rem;
-    padding: 0 clamp(0.5rem, 1vw, 1rem);
+    padding: 0;
     width: min(100%, 1200px);
 }
 
@@ -2126,7 +2129,7 @@ article li + li {
     }
 
     .page-container {
-        padding: 0.9rem;
+        padding: 0;
     }
 
     .cta-button {
