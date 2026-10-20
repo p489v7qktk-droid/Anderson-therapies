@@ -25,14 +25,14 @@
     <meta name="twitter:image:alt" content="Anderson Therapies: Communication. Connection. Belonging.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Merriweather:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
     <header>
         <div class="header-inner">
             <div class="brand-group">
-                <p class="brand" style="color: #4a148c;">Anderson Therapies</p>
+                <p class="brand">Anderson Therapies</p>
             </div>
         </div>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="nav-toggle-label">Menu</span></button>
@@ -48,23 +48,20 @@
     </header>
 
     <main class="container">
-        <section class="hero">
+        <section class="hero home-hero">
             <div class="hero-content">
                 <div class="hero-feature-panel">
-                <div class="hero-intro">
-                    <div class="hero-headshot-wrap">
-                        <img src="Headshot 17.9.26.png" alt="" class="hero-headshot-blur" aria-hidden="true">
-                        <img src="Headshot 17.9.26.png" alt="Sabrina Anderson headshot" class="hero-headshot">
+                    <div class="home-design-canvas">
+                        <div class="home-design-copy">
+                            <p>Hi, I'm</p>
+                            <h1>Sabrina Anderson</h1>
+                            <p>Welcome to Anderson Therapies</p>
+                            <p>Communication, connection and belonging</p>
+                        </div>
+                        <div class="hero-headshot-wrap">
+                            <img src="Headshot 17.9.26.png" alt="Sabrina Anderson" class="hero-headshot">
+                        </div>
                     </div>
-                    <div class="hero-intro-text">
-                        <p class="intro-line"><strong>Hi, I'm Sabrina Anderson.</strong></p>
-                        <p class="welcome-line">Welcome to Anderson Therapies.</p>
-                        <h1>Communication.<br>Connection.<br>Belonging.</h1>
-                    </div>
-                    <img src="Anderson Therapies logo 23.6.26.jpeg" alt="Anderson Therapies logo" class="main-logo hero-side-logo">
-                </div>
-
-                <p class="hero-highlight"><strong>When people come together around shared values and what matters, they begin to understand one another in new ways, build communication together and create lasting change.</strong></p>
                 </div>
 
                 <section class="home-what-section" aria-labelledby="what-i-do-title">
@@ -110,44 +107,39 @@
                     </div>
                 </section>
 
-                <section class="home-contact-section cta-box" aria-labelledby="home-contact-title">
-                    <h2 id="home-contact-title">Let's Start a Conversation</h2>
-                    <p>Whether you are developing a project, strengthening a service, creating opportunities for shared learning or exploring an international partnership, I would love to hear from you.</p>
-                    <div class="hero-buttons">
-                        <a class="btn" href="contact.html">Discuss a project, collaboration, supervision or training</a>
-                    </div>
-                </section>
-            </div>
-        </section>
-        
-        <section class="accreditations" aria-label="Accreditations and registrations">
-            <p class="sector-line">Health <span aria-hidden="true">•</span> Education <span aria-hidden="true">•</span> Local Government <span aria-hidden="true">•</span> Community Settings <span aria-hidden="true">•</span> National Leadership</p>
-            <p>Registered and accredited with trusted professional bodies.</p>
-            <div class="logo-row">
-                <img src="BABCP logo.png" alt="BABCP logo">
-                <img src="credential.png" alt="Professional credentials">
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>© 2026 Anderson Therapies Ltd</p>
-        <nav class="footer-links" aria-label="Footer links">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <span class="divider" aria-hidden="true">•</span>
-            <a href="cookie-policy.html">Cookie Policy</a>
-            <span class="divider" aria-hidden="true">•</span>
-            <a href="accessibility-statement.html">Accessibility Statement</a>
-            <span class="divider" aria-hidden="true">•</span>
-            <a href="terms-of-use.html">Terms of Use</a>
-        </nav>
-        <div class="footer-social">
-            <a class="linkedin-link" href="https://www.linkedin.com/in/sabrina-anderson-aa41bb2ba/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-                <img src="OIP.webp" alt="LinkedIn logo">
-            </a>
+        <div class="footer-inner">
+            <section class="footer-cta" aria-labelledby="footer-cta-title">
+                <div class="footer-cta-copy">
+                    <h2 id="footer-cta-title">Let’s Start A Conversation</h2>
+                    <p>Explore a project, training, supervision or collaboration</p>
+                </div>
+                <a class="btn" href="contact.html">Get in Touch</a>
+            </section>
+            <div class="footer-bottom-row">
+                <p>© 2026 Anderson Therapies Ltd</p>
+                <nav class="footer-links" aria-label="Footer links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="accessibility-statement.html">Accessibility Statement</a>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </nav>
+                <div class="footer-credentials-social" aria-label="Professional credentials and social media">
+                    <div class="footer-credentials" aria-label="Professional credentials">
+                        <img src="BABCP logo.png" alt="BABCP">
+                        <img src="credential.png" alt="RCSLT and HCPC registered">
+                    </div>
+                    <a class="footer-social" href="https://www.linkedin.com/in/sabrina-anderson-aa41bb2ba/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        <img src="OIP.webp" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="script.js"></script>
 </body>
 </html>
-
