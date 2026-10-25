@@ -2030,6 +2030,23 @@ article li + li {
 .location-gambia { top: 26%; left: 18%; }
 .location-jamaica { top: 62%; left: 18%; }
 .location-london { top: 18%; right: 14%; }
+.location-dot[href] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.location-dot[href]:hover {
+    box-shadow: 0 4px 12px rgba(116, 88, 155, 0.2);
+}
+
+.location-dot[href]:focus-visible {
+    outline: 3px solid #5c4770;
+    outline-offset: 3px;
+}
 
 .icon-grid li::before,
 .partnership-grid li::before {
