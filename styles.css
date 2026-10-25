@@ -1239,11 +1239,11 @@ article h3 {
     display: block;
     width: 100%;
     max-width: 390px;
-    max-height: 340px;
+    aspect-ratio: 10 / 11;
     justify-self: center;
-    border-radius: 28px;
+    border-radius: 50%;
     overflow: hidden;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
@@ -1368,7 +1368,7 @@ article h3 {
     }
 
     .events-hero-image {
-        max-height: 280px;
+        max-width: 320px;
     }
 
     .event-cues {
