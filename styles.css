@@ -1659,11 +1659,13 @@ article ul {
     margin: 0 0 1rem;
 }
 
-.booking-legal-small-print p {
+.booking-legal-small-print p,
+.booking-refund-note {
     margin: 0 0 0.5rem;
     color: #6b6b75;
     font-size: 13px;
     line-height: 1.5;
+    text-align: left;
 }
 
 .booking-legal-small-print a {
