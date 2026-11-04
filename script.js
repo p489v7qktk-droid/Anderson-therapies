@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         onComplete: () => {
                             paymentEmbed.hidden = true;
                             paymentInstructions.textContent = 'Thank you - your payment has been received.';
-                            setMessage(paymentMessage, 'success', `Payment received - thank you! Your booking reference is ${result.booking_reference}. Your place is being confirmed and a confirmation email is on its way. Please check your junk folder if it doesn’t arrive within a few minutes.`);
+                            setMessage(paymentMessage, 'success', `Payment received - thank you! Your booking reference is ${result.booking_reference}. A confirmation email is on its way. Please check your junk folder if it doesn’t arrive within a few minutes.`);
                             checkout.destroy();
                         },
                     });
