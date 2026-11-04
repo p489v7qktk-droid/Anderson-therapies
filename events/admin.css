@@ -1,0 +1,111 @@
+.admin-page {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.admin-panel {
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border: 1px solid rgba(170, 132, 201, 0.2);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.82);
+}
+
+.admin-panel form {
+    display: grid;
+    justify-items: start;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.admin-panel input {
+    width: min(100%, 34rem);
+    padding: 0.75rem;
+    border: 1px solid rgba(93, 61, 122, 0.3);
+    border-radius: 10px;
+    font: inherit;
+}
+
+.admin-panel [data-mfa-qr] {
+    display: block;
+    width: min(100%, 16rem);
+    height: auto;
+    margin: 1rem 0;
+}
+
+.admin-panel [data-mfa-secret] {
+    display: inline-block;
+    overflow-wrap: anywhere;
+    padding: 0.5rem;
+    background: #f7f1fc;
+}
+
+.admin-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.admin-toolbar h2 {
+    flex: 1 1 100%;
+}
+
+.admin-table-wrap {
+    overflow-x: auto;
+    border: 1px solid rgba(170, 132, 201, 0.2);
+    border-radius: 16px;
+    background: #fff;
+}
+
+.admin-table-wrap table {
+    width: 100%;
+    min-width: 1080px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table-wrap th,
+.admin-table-wrap td {
+    padding: 0.8rem;
+    border-bottom: 1px solid rgba(170, 132, 201, 0.16);
+    vertical-align: top;
+    white-space: pre-line;
+}
+
+.admin-table-wrap th {
+    color: #4a148c;
+    background: #f7f1fc;
+}
+
+.admin-table-wrap tr:last-child td {
+    border-bottom: 0;
+}
+
+.booking-action {
+    display: grid;
+    gap: 0.5rem;
+    min-width: 170px;
+}
+
+.booking-action select {
+    padding: 0.55rem;
+    border: 1px solid rgba(93, 61, 122, 0.3);
+    border-radius: 8px;
+    font: inherit;
+}
+
+.admin-status {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.admin-dashboard[hidden],
+.admin-page [hidden] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .admin-toolbar > button {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Parent Space Booking Admin | Anderson Therapies</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a class="brand-group" href="../index.html" aria-label="Anderson Therapies home">
+                <p class="brand">Anderson Therapies</p>
+            </a>
+        </div>
+    </header>
+
+    <main class="page-container admin-page">
+        <section class="page-intro-panel">
+            <p class="events-label">PRIVATE ADMIN AREA</p>
+            <h1>Parent Space bookings</h1>
+            <p>Verify payments in Tide before marking a booking as paid. Only then will the confirmation email be sent.</p>
+        </section>
+
+        <p class="form-message" data-admin-message aria-live="polite"></p>
+
+        <section class="admin-panel" data-login-panel>
+            <h2>Administrator sign in</h2>
+            <p>Enter the authorised Anderson Therapies email address. A secure sign-in link will be sent to that inbox, followed by verification with your authenticator app.</p>
+            <form data-login-form>
+                <label for="admin-email">Business email</label>
+                <input id="admin-email" name="email" type="email" autocomplete="email" required>
+                <button class="btn primary" type="submit">Email me a secure sign-in link</button>
+            </form>
+        </section>
+
+        <section class="admin-panel" data-mfa-panel hidden>
+            <h2 data-mfa-title>Authenticator verification</h2>
+            <p data-mfa-instructions></p>
+            <div data-mfa-enrollment hidden>
+                <img data-mfa-qr alt="Authenticator setup QR code">
+                <p>If you can’t scan the QR code, enter this key in your authenticator app:</p>
+                <code data-mfa-secret></code>
+            </div>
+            <form data-mfa-form>
+                <label for="admin-mfa-code">6-digit authenticator code</label>
+                <input id="admin-mfa-code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" required>
+                <button class="btn primary" type="submit">Verify authenticator code</button>
+            </form>
+        </section>
+
+        <section class="admin-dashboard" data-dashboard hidden>
+            <div class="admin-toolbar">
+                <h2>Bookings</h2>
+                <button class="btn secondary" type="button" data-refresh>Refresh list</button>
+                <button class="btn secondary" type="button" data-sign-out>Sign out</button>
+            </div>
+            <div class="admin-panel">
+                <h3>Standard ticket payment link</h3>
+                <p>The website switches from £20 to £30 after eight verified early-bird payments or on 1 February 2027, whichever happens first. Save the £30 Tide link here before that point so standard bookings can continue without interruption. You must also disable the old £20 link in Tide; Tide does not provide an automatic link switch for this checkout.</p>
+                <form data-standard-link-form>
+                    <label for="standard-payment-link">£30 Tide payment link</label>
+                    <input id="standard-payment-link" name="payment_url" type="url" inputmode="url" placeholder="https://pay.tide.co/..." required>
+                    <button class="btn primary" type="submit">Save £30 payment link</button>
+                </form>
+            </div>
+            <div class="admin-table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reference</th>
+                            <th>Booking date</th>
+                            <th>Attendee</th>
+                            <th>Contact</th>
+                            <th>Event preferences</th>
+                            <th>Ticket / amount received</th>
+                            <th>Booking status</th>
+                            <th>Payment action</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bookings></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="./booking-config.js"></script>
+    <script src="./admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[functions.parent-space-booking]
+verify_jwt = false
+
+[functions.parent-space-admin]
+verify_jwt = false
+
+[functions.stripe-webhook]
+verify_jwt = false
+
+[functions.parent-space-reminders]
+verify_jwt = false
