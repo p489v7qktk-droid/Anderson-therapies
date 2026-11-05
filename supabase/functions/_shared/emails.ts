@@ -97,17 +97,17 @@ export function confirmationEmail(booking: Booking): { subject: string; html: st
         <p>Hello ${name},</p>
         <p>Thank you for booking The Parent Space! We're looking forward to welcoming you for an afternoon of connection, reflection, music and drumming.</p>
         <p><strong>Your place is confirmed!</strong></p>
-        <p><strong>Sunday 28 February 2027</strong><br><strong>Time:</strong> 2:00–4:00 pm<br><strong>Venue:</strong> The Motor House, The Oak House Studio &amp; Therapies<br>The Oak House, Church Street, Hatfield, AL9 5AR</p>
+        <p><strong>Sunday 28 February 2027</strong><br><strong>Time:</strong> 2:00–4:00 pm<br><strong>Venue:</strong> The Oak House Studio and Therapies<br>Church Street, Hatfield, AL9 5AR</p>
         <p><strong>Payment received:</strong> ${price}<br><strong>Booking reference:</strong> ${reference}</p>
         <h2 style="font-size:18px;color:#4a148c">A little about the afternoon</h2>
         <p>We'll explore creative ways of responding to children's anxiety and emotional distress through reflection, rhythm, drumming and shared activities.</p>
         <p>No previous experience of CBT, music or drumming is needed. Just come as you are!</p>
         <h2 style="font-size:18px;color:#4a148c">Getting here</h2>
         <p>Complimentary on-site parking is available. The venue is also a short walk from Hatfield train station.</p>
-        <p><a href="${escapeHtml(oakHouseUrl)}">Visit The Oak House</a> · <a href="${escapeHtml(directionsUrl)}">Get directions</a></p>
+        <p><a href="${escapeHtml(oakHouseUrl)}">Visit The Oak House Studio and Therapies</a> · <a href="${escapeHtml(directionsUrl)}">Get directions</a></p>
         <p>We look forward to meeting you!</p>
         <p>Warm wishes,<br><strong>Sabrina &amp; Malachi (KB)</strong><br>The Parent Space<br><a href="${websiteUrl}">Anderson Therapies</a><br>+447927188998</p>
     `);
-    const text = `Hello ${firstName(booking.full_name)},\n\nThank you for booking The Parent Space! We're looking forward to welcoming you for an afternoon of connection, reflection, music and drumming.\n\nYour place is confirmed!\n\nSunday 28 February 2027\nTime: 2:00–4:00 pm\nVenue: The Motor House, The Oak House Studio & Therapies\nThe Oak House, Church Street, Hatfield, AL9 5AR\n\nPayment received: ${price}\nBooking reference: ${booking.booking_reference}\n\nA little about the afternoon\nWe'll explore creative ways of responding to children's anxiety and emotional distress through reflection, rhythm, drumming and shared activities.\n\nNo previous experience of CBT, music or drumming is needed. Just come as you are!\n\nGetting here\nComplimentary on-site parking is available. The venue is also a short walk from Hatfield train station.\n\nThe Oak House: ${oakHouseUrl}\nGet directions: ${directionsUrl}\n\nWe look forward to meeting you!\n\nWarm wishes,\nSabrina & Malachi (KB)\nThe Parent Space\nAnderson Therapies\n${websiteUrl}\n+447927188998`;
+    const text = `Hello ${firstName(booking.full_name)},\n\nThank you for booking The Parent Space! We're looking forward to welcoming you for an afternoon of connection, reflection, music and drumming.\n\nYour place is confirmed!\n\nSunday 28 February 2027\nTime: 2:00–4:00 pm\nVenue: The Oak House Studio and Therapies\nChurch Street, Hatfield, AL9 5AR\n\nPayment received: ${price}\nBooking reference: ${booking.booking_reference}\n\nA little about the afternoon\nWe'll explore creative ways of responding to children's anxiety and emotional distress through reflection, rhythm, drumming and shared activities.\n\nNo previous experience of CBT, music or drumming is needed. Just come as you are!\n\nGetting here\nComplimentary on-site parking is available. The venue is also a short walk from Hatfield train station.\n\nThe Oak House Studio and Therapies: ${oakHouseUrl}\nGet directions: ${directionsUrl}\n\nWe look forward to meeting you!\n\nWarm wishes,\nSabrina & Malachi (KB)\nThe Parent Space\nAnderson Therapies\n${websiteUrl}\n+447927188998`;
     return { subject, html, text };
 }
