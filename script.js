@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('[data-contact-form]');
 
     if (contactForm) {
+        const topicSelect = contactForm.querySelector('#topic');
+        const requestedTopic = new URLSearchParams(window.location.search).get('topic');
+        if (topicSelect && requestedTopic && [...topicSelect.options].some((option) => option.value === requestedTopic)) {
+            topicSelect.value = requestedTopic;
+        }
+
         const formMessage = contactForm.querySelector('.form-message');
         const showMessage = (type, text) => {
             if (!formMessage) return;
